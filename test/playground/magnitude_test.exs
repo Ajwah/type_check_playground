@@ -25,25 +25,10 @@ defmodule Playground.MagnitudeTest do
       |> TypeCheck.Type.build()
       |> to_gen()
       |> StreamData.resize(1000)
-      |> Enum.take(10)
-      |> IO.inspect
-
-
-      # SAMPLE OUTPUT
-      # [
-      #   %P.Magnitude{unit: :kg, amount: 572},
-      #   %P.Magnitude{unit: :kg, amount: -238},
-      #   %P.Magnitude{unit: :kg, amount: 662},
-      #   %P.Magnitude{unit: :kg, amount: -894},
-      #   %P.Magnitude{unit: :kg, amount: -673},
-      #   %P.Magnitude{unit: :kg, amount: -332},
-      #   %P.Magnitude{unit: :kg, amount: -118},
-      #   %P.Magnitude{unit: :kg, amount: 951},
-      #   %P.Magnitude{unit: :kg, amount: 717},
-      #   %P.Magnitude{unit: :kg, amount: 610}
-      # ]
-      # .
-      # Finished in 0.4 seconds (0.4s async, 0.00s sync)
+      |> Enum.take(100)
+      |> Enum.each(fn %Magnitude{} = e ->
+        assert is_integer(e.amount)
+      end)
     end
   end
 end
