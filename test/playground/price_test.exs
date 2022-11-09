@@ -1,26 +1,26 @@
-defmodule Playground.DurationTest do
+defmodule Playground.PriceTest do
   @moduledoc false
-  alias P.Duration
+  alias P.Price
 
   use ExUnit.Case, async: true
-  doctest Duration
+  doctest Price
 
   import TypeCheck.ExUnit
   import TypeCheck.Type.StreamData
   require TypeCheck.Type
 
-  spectest(Duration)
+  spectest(Price)
 
   describe "Explore StreamData" do
     test "produce" do
-      Duration.t()
+      Price.t()
       |> TypeCheck.Type.build()
       |> to_gen()
       |> StreamData.resize(1000)
       |> Enum.take(100)
-      |> Enum.each(fn %Duration{} = e ->
-        assert e.value.unit == :days
-        assert e.value.amount >= 3
+      |> Enum.each(fn %Price{} = e ->
+        assert e.value.unit in [:cad, :usd]
+        assert is_number(e.value.amount)
       end)
     end
   end

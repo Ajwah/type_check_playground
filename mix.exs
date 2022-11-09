@@ -22,7 +22,7 @@ defmodule P.MixProject do
   defp deps do
     [
       {:type_check, "~> 0.13.2"},
-      {:stream_data, "~> 0.5", only: :test},
+      {:stream_data, "~> 0.5", only: :test}
     ]
   end
 end

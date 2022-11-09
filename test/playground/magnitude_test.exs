@@ -9,7 +9,7 @@ defmodule Playground.MagnitudeTest do
   import TypeCheck.Type.StreamData
   require TypeCheck.Type
 
-  spectest Magnitude
+  spectest(Magnitude)
 
   defmodule TypeOverrides do
     use TypeCheck
