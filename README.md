@@ -1,2 +1,3 @@
-# type_check_playground
-Playing around with TypeCheck
+# Type Check Playground
+
+Let's build sandcastles!
