@@ -1,25 +1,25 @@
-defmodule Playground.DurationTest do
+defmodule Playground.BoxTest do
   @moduledoc false
-  alias P.Duration
+  alias P.Box
 
   use ExUnit.Case, async: true
-  doctest Duration
+  doctest Box
 
   import TypeCheck.ExUnit
   import TypeCheck.Type.StreamData
   require TypeCheck.Type
 
-  spectest(Duration)
+  spectest(Box)
 
   describe "Explore StreamData" do
     test "produce" do
-      Duration.t()
+      Box.t()
       |> TypeCheck.Type.build()
       |> to_gen()
       |> Enum.take(100)
-      |> Enum.each(fn %Duration{} = e ->
-        assert e.value.unit == :days
-        assert e.value.amount >= 3
+      |> Enum.each(fn %Box{} = e ->
+        assert e.height.value.unit in [:cm, :in]
+        assert is_number(e.height.value.amount)
       end)
     end
   end

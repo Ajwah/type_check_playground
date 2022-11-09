@@ -16,7 +16,6 @@ defmodule Playground.DistanceTest do
       Distance.t()
       |> TypeCheck.Type.build()
       |> to_gen()
-      |> StreamData.resize(1000)
       |> Enum.take(100)
       |> Enum.each(fn %Distance{} = e ->
         assert e.value.unit in [:km, :mi]

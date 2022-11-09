@@ -16,7 +16,6 @@ defmodule Playground.PriceTest do
       Price.t()
       |> TypeCheck.Type.build()
       |> to_gen()
-      |> StreamData.resize(1000)
       |> Enum.take(100)
       |> Enum.each(fn %Price{} = e ->
         assert e.value.unit in [:cad, :usd]
