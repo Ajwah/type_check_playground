@@ -21,7 +21,7 @@ defmodule P.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:type_check, "~> 0.12.1"},
+      {:type_check, "~> 0.13.2"},
       {:stream_data, "~> 0.5", only: :test},
     ]
   end
