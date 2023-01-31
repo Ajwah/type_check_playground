@@ -1,4 +1,4 @@
 %{
   "stream_data": {:hex, :stream_data, "0.5.0", "b27641e58941685c75b353577dc602c9d2c12292dd84babf506c2033cd97893e", [:mix], [], "hexpm", "012bd2eec069ada4db3411f9115ccafa38540a3c78c4c0349f151fc761b9e271"},
-  "type_check": {:hex, :type_check, "0.13.2", "b4f60f4718446df37d34fb94a04c7438b7a492ef2fb351ec37419de50a6be078", [:mix], [{:credo, "~> 1.5", [hex: :credo, repo: "hexpm", optional: true]}, {:stream_data, "~> 0.5.0", [hex: :stream_data, repo: "hexpm", optional: true]}], "hexpm", "5836815db96cd21a2a6e299ac8d0e8c5efcc6f5fc84b0d0bb26ddfe4f3e89ec2"},
+  "type_check": {:hex, :type_check, "0.13.3", "1e1aea5bdb144b4635c21c4e50449a5867d43f518122d4a67c9b091eb803332f", [:mix], [{:credo, "~> 1.5", [hex: :credo, repo: "hexpm", optional: true]}, {:stream_data, "~> 0.5.0", [hex: :stream_data, repo: "hexpm", optional: true]}], "hexpm", "65f56243c321180f646f513c21da1da9d05255fd42e03a2410e92c5bc900fdbe"},
 }
